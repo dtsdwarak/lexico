@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Dwarak http://www.dwarak.in -->
+
+<html>
+	<head>
+		<title>Project Jarvis</title>
+			<script src="../js/jquery.min.js" type="text/javascript"></script>
+
+		<link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+		<script src="../js/bootstrap.js" type="text/javascript"></script>
+		<script src="js/speech.js" type="text/javascript" ></script>
+
+		<style>
+			
+		html{
+			height: 100%;
+			width: 100%;
+		}
+
+
+		#Dictation{
+			position: fixed;
+			left:50%;
+			top:50%;
+			margin-top:-50px;
+			margin-left: -150px;
+			width: 400px;
+			height: 100px;
+			border: 1px solid;
+		}
+
+		#status {
+			float:right;
+			margin-right: 20px;
+		}
+
+		</style>
+
+	</head>
+
+	<body>
+		Dwarak
+		<div id="Dictation">
+			<span id="final_transcript_value"></span>
+			<span id="interim_transcript_value"></span>
+		</div>	
+
+		<div id="status_button">
+			<button onclick="start_recognition()"><img src="img/mic.gif" id="status_img" /></button>
+		</div>
+		<button type="button" class="btn btn-default" onclick="final_transcript_value.innerHTML = 'Dwarak'">Click Me   </button>
+
+
+		<div id="jarvis_status"> </div>
+
+		
+
+	</body>
+
+	<script type="text/javascript">
+
+		function initiate(){
+			alert('Progressing Correctly!');
+		}
+
+	</script>
+
+</html>

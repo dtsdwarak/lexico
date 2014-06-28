@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- Dwarak http://www.dwarak.in -->
+
+<html>
+	<head>
+		<title>Lexiko</title>
+
+		<!-- Favicon -->
+		<link rel="icon" href="images/dictionary.png" type="image/png">
+
+		<!-- CSS -->
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+		<link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+		<link href="css/application.css" type="text/css" rel="stylesheet">
+
+		<!-- JavaScript -->
+		<script type="text/JavaScript" src="js/jquery.min.js"></script> <!-- jQuery libaray 1.11.1 -->
+		<script type="text/JavaScript" src="js/bootstrap.js"></script>
+		<script type="text/JavaScript" src="js/application.js"></script> <!-- App specific JavaScript functions -->
+	</head>
+
+	<body>
+		<div id="header">
+			<center>
+				<h1 id="title">Lexiko</h1>
+				<h3 id="titleSub">The Dumbass Dictionary</h3>
+				<input type="text" id="meaningForWord" placeholder="Put something in!">
+				<button class="btn" id="microphoneButton" onclick="start_recognition()"><i class="fa" id="microphoneIcon"></i></button>
+				<button type="button" id="fetchValueButton" data-loading-text="Lookin' up" class="btn btn-primary">Find me</button>
+			</center>
+		</div>
+		<div id="output">
+			<div id="wordLabels">
+				<h3>Word</h3>
+				<h3>Meaning</h3>
+				<h3>Speech</h3>
+				<h3>Credits</h3>
+			</div>
+			<div class="wordDefinition">
+				<h4 class="givenWord"></h4>
+				<h4 class="wordMeaning"></h4>
+				<h4 class="speech"></h4>
+				<h4 class="credits"><h4>
+			</div>
+		</div>
+
+		<!-- Speech Recognition status console-->
+		<div id="jarvis_status">	
+		</div>
+
+		<!-- ======== Alert Modals =========== -->
+
+		<div class="modal fade messageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				        <h4 class="modal-title">Lexiko</h4>
+			        </div>
+			        <!-- Modal Body-->
+	                <div class="modal-body">
+	        			<p>You've gotta put in something!</p>
+	      			</div>
+	      			<!-- Modal Footer-->
+	      			<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Sorry, my bad.</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- WebSpeechAPI Check Modal -->
+
+		<div class="modal fade webspeechAPIModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				        <h4 class="modal-title">Lexiko</h4>
+			        </div>
+			        <!-- Modal Body-->
+	                <div class="modal-body">
+	        			<p>Sorry but, your browser <span style="color:red">doesn't support Webspeech API</span>. You may type in to get your definitions though. I suggest you look into the list of <a href="http://caniuse.com/#feat=web-speech" target="_blank">supported browsers</a> for using Speech Recognition</i></p>
+	      			</div>
+	      			<!-- Modal Footer-->
+	      			<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Oops, okay!</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- No result alert -->
+
+		<div class="modal fade noMeaning" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				        <h4 class="modal-title">Lexiko is sorry</h4>
+			        </div>
+			        <!-- Modal Body-->
+	                <div class="modal-body">
+	        			<p>Couldn't find a valid meaning for the word you suggested</p>
+	      			</div>
+	      			<!-- Modal Footer-->
+	      			<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
