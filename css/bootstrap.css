@@ -1,5 +1,5 @@
 /* Google Web Fonts */
-@import url(http://fonts.googleapis.com/css?family=Strait);
+@import url(https://fonts.googleapis.com/css?family=Strait);
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
@@ -2402,6 +2402,7 @@ input[type="button"].btn-block {
 }
 .glyphicon-asterisk:before {
   content: "\2a";
+
 }
 .glyphicon-plus:before {
   content: "\2b";
@@ -3958,6 +3959,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-text {
   color: #777777;
+
 }
 .navbar-default .navbar-nav > li > a {
   color: #777777;
