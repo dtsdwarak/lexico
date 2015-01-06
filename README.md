@@ -2,7 +2,7 @@
 
 ##It is...
 
-A dictionary with a web interface powered by WebSpeechAPI. UI is fairly responsive, although I cannot guarantee. :D Uses nothing but HTML, CSS and JavaScript. Dictionary powered by [Wordnik API](http://developer.wordnik.com/)
+A dictionary with a web interface powered by WebSpeechAPI. UI is fairly responsive, although I cannot guarantee. :D Uses nothing but HTML, CSS and JavaScript. Dictionary powered by [Wordnik API](http://developer.wordnik.com/). Alternatively, you can also use, [Words API](https://www.wordsapi.com/)
 
 ##To run it
 
